@@ -1,0 +1,37 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    <link rel="stylesheet" href="{% static 'top/index.css' %}">
+    <title>{% block page_title %}{% endblock %}</title>
+
+</head>
+<body>
+<nav>
+    <p class="site-name">AutoShift</p>
+    <ul>
+        <li><a href="{% url 'top:index' %}">Top</a></li>
+        <li><a href="{% url 'shift:list' %}">Shift</a></li>
+        <li><a href="{% url 'member:list' %}">Member</a></li>
+        <li><a href="{% url 'create:create' %}">Create</a></li>
+
+    </ul>
+</nav>
+
+<div class="title">
+    <h1>{% block title %}{% endblock %}</h1>
+</div>
+
+<div class="content">
+    {% block content%}{% endblock %}
+</div>
+
+<hr>
+<footer>
+  ©kanpeipei
+</footer>
+
+</body>
+</html>

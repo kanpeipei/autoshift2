@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block page_title %}Top{% endblock %}
+{% block title %}Top{% endblock %}
+
+{% block content %}
+
+    <div class="index">
+        <div class="content-info">
+    {#        <h1 class="info-title">Shift</h1>#}
+            <a href="{% url 'shift:list' %}" class="info-title"><h1>Shift</h1></a>
+            <h2 class="info-detail">希望シフトを収集</h2>
+        </div>
+
+        <div class="content-info">
+    {#        <h1 class="info-title">Member</h1>#}
+            <a href="{% url 'member:list' %}" class="info-title"><h1>Member</h1></a>
+            <h2 class="info-detail">従業員の情報を管理</h2>
+        </div>
+
+        <div class="content-info">
+    {#        <h1 class="info-title">Create</h1>#}
+            <a href="{% url 'create:create' %}" class="info-title"><h1>Create</h1></a>
+            <h2 class="info-detail">シフトを自動作成</h2>
+        </div>
+    </div>
+
+{% endblock %}

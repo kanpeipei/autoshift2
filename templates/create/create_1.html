@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block page_title %}Create{% endblock %}
+{% block title %}Create{% endblock %}
+
+{% block content %}
+    西暦と月を指定してくだい。
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.year }}年 {{ form.month }}月
+        <button type="submit" class="button">シフトを自動作成</button>
+    </form>
+{% endblock %}

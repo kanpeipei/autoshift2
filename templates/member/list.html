@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block page_title %}Member{% endblock %}
+{% block title %}Member{% endblock %}
+{% block content %}
+    <a href="{% url 'member:add' %}">新規メンバー登録</a>
+    <table border="1" style="border-collapse: collapse">
+        <tr>
+            <th>名前</th>
+            <th>年齢</th>
+            <th>パートナー番号</th>
+            <th>時給</th>
+            <th>カウンター</th>
+            <th>フライヤー</th>
+            <th>厨房</th>
+            <th>SMG</th>
+            <th>オープン</th>
+        </tr>
+        {% for member in members %}
+        <tr>
+            <td>{{ member.name }}</td>
+            <td>{{ member.age }}</td>
+            <td>{{ member.partner_number }}</td>
+            <td>{{ member.hourly_pay }}</td>
+            <td>
+                {% if member.is_counter %}
+                    ○
+                {% endif %}
+            </td>
+            <td>
+                {% if member.is_fryer %}
+                    ○
+                {% endif %}
+            </td>
+            <td>
+                {% if member.is_kitchen %}
+                    ○
+                {% endif %}
+            </td>
+            <td>
+                {% if member.is_smg %}
+                    ○
+                {% endif %}
+            </td>
+            <td>
+                {% if member.is_opener %}
+                    ○
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block page_title %}New Member{% endblock %}
+{% block title %}New Member{% endblock %}
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <h2>メンバー情報</h2>
+        <table>
+            <tr>
+                <td>名前</td>
+                <td>: {{ form.name }}</td>
+            </tr>
+            <tr>
+                <td>年齢</td>
+                <td>: {{ form.age }}歳</td>
+            </tr>
+            <tr>
+                <td>パートナー番号</td>
+                <td>: {{ form.partner_number }}</td>
+            </tr>
+            <tr>
+                <td>時給</td>
+                <td>: {{ form.hourly_pay }}円</td>
+            </tr>
+        </table>
+        <h2>ポジション</h2>
+        <table>
+            <tr>
+                <td>{{ form.is_counter }}</td>
+                <td>カウンター</td>
+            </tr>
+            <tr>
+                <td>{{ form.is_fryer }}</td>
+                <td>フライヤー</td>
+          </tr>
+            <tr>
+                <td>{{ form.is_kitchen }}</td>
+                <td>厨房</td>
+            </tr>
+        </table>
+
+
+
+        <h2>その他</h2>
+        <table>
+            <tr>
+                <td>{{ form.is_smg }}</td>
+                <td>シフトマネージャー</td>
+            </tr>
+            <tr>
+                <td>{{ form.is_opener }}</td>
+                <td>オープン</td>
+            </tr>
+        </table>
+
+        <button type="submit" class="button">登録</button>
+    </form>
+{% endblock %}

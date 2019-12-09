@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+{% block page_title %}Create{% endblock %}
+{% block title %}Create{% endblock %}
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.year }}年 {{ form.month }}月
+        <button type="submit" class="button">シフトを再自動作成</button>
+    </form>
+{#    {{ shift.member.partner_number }}#}
+{#    {% for key, value in shifts.items %}#}
+{#    {{ key }} : {{ value.member }}<br>#}
+{#    {% endfor %}#}
+{#    {{ shifts.opener.member }}#}
+    <table border="1" style="border-collapse: collapse">
+    <tr>
+        <th>{{ year }}年{{ month }}月</th>
+        {% for day in days %}
+        <th>{{ day }}日</th>
+        {% endfor %}
+    </tr>
+    <tr>
+        <td>オープン</td>
+        {% for shift in shifts %}
+        {% if shift.smg_shifts.open_shifts %}
+        <td>
+            {{ shift.smg_shifts.open_shifts.member.name }}<br>
+            {{ shift.smg_shifts.open_shifts.since }}-{{ shift.smg_shifts.open_shifts.to }}
+        </td>
+        {% else %}
+            <th>(未)</th>
+        {% endif %}
+        {% endfor %}
+    </tr>
+    <tr>
+        <td>クローズ</td>
+        {% for shift in shifts %}
+        {% if shift.smg_shifts.close_shifts %}
+        <td>
+            {{ shift.smg_shifts.close_shifts.member.name }}<br>
+            {{ shift.smg_shifts.close_shifts.since }}-{{ shift.smg_shifts.close_shifts.to }}
+        </td>
+        {% else %}
+            <th>(未)</th>
+        {% endif %}
+        {% endfor %}
+    </tr>
+    <tr>
+        <td>カウンター</td>
+        {% for shift in shifts %}
+        <td>
+        {% if shift.counter_shifts.am1_shifts %}
+            {{ shift.counter_shifts.am1_shifts.member.name }}<br>
+            {{ shift.counter_shifts.am1_shifts.since }}-{{ shift.counter_shifts.am1_shifts.to }}
+        {% else %}
+            (未)
+        {% endif %}
+            <br>
+        {% if shift.counter_shifts.am2_shifts %}
+            {{ shift.counter_shifts.am2_shifts.member.name }}<br>
+            {{ shift.counter_shifts.am2_shifts.since }}-{{ shift.counter_shifts.am2_shifts.to }}
+        {% else %}
+            (未)
+        {% endif %}
+            <br>
+        {% if shift.counter_shifts.am3_shifts %}
+            {{ shift.counter_shifts.am3_shifts.member.name }}<br>
+            {{ shift.counter_shifts.am3_shifts.since }}-{{ shift.counter_shifts.am3_shifts.to }}
+        {% else %}
+            (未)
+        {% endif %}
+            <br>
+        {% if shift.counter_shifts.am4_shifts %}
+            {{ shift.counter_shifts.am4_shifts.member.name }}<br>
+            {{ shift.counter_shifts.am4_shifts.since }}-{{ shift.counter_shifts.am4_shifts.to }}
+        {% else %}
+            (未)
+        {% endif %}
+            <br>
+        {% if shift.counter_shifts.pm1_shifts %}
+            {{ shift.counter_shifts.pm1_shifts.member.name }}<br>
+            {{ shift.counter_shifts.pm1_shifts.since }}-{{ shift.counter_shifts.pm1_shifts.to }}
+        {% else %}
+            (未)
+        {% endif %}
+            <br>
+        {% if shift.counter_shifts.pm2_shifts %}
+            {{ shift.counter_shifts.pm2_shifts.member.name }}<br>
+            {{ shift.counter_shifts.pm2_shifts.since }}-{{ shift.counter_shifts.pm2_shifts.to }}
+        {% else %}
+            (未)
+        {% endif %}
+            <br>
+        {% if shift.counter_shifts.pm3_shifts %}
+            {{ shift.counter_shifts.pm3_shifts.member.name }}<br>
+            {{ shift.counter_shifts.pm3_shifts.since }}-{{ shift.counter_shifts.pm3_shifts.to }}
+        {% else %}
+            (未)
+        {% endif %}
+        </td>
+        {% endfor %}
+    </tr>
+
+    <tr>
+        <td>キッチン</td>
+        {% for shift in shifts %}
+        <td>
+        {% if shift.kitchen_shifts.am1_shifts %}
+            {{ shift.kitchen_shifts.am1_shifts.member.name }}<br>
+            {{ shift.kitchen_shifts.am1_shifts.since }}-{{ shift.kitchen_shifts.am1_shifts.to }}
+        {% else %}
+            (未)
+        {% endif %}
+            <br>
+{#        {% if shift.kitchen_shifts.am2_shifts %}#}
+{#            {{ shift.kitchen_shifts.am2_shifts.member.name }}<br>#}
+{#            {{ shift.kitchen_shifts.am2_shifts.since }}-{{ shift.kitchen_shifts.am2_shifts.to }}#}
+{#        {% else %}#}
+{#            (未)#}
+{#        {% endif %}#}
+{#            <br>#}
+{#        {% if shift.kitchen_shifts.am3_shifts %}#}
+{#            {{ shift.kitchen_shifts.am3_shifts.member.name }}<br>#}
+{#            {{ shift.kitchen_shifts.am3_shifts.since }}-{{ shift.kitchen_shifts.am3_shifts.to }}#}
+{#        {% else %}#}
+{#            (未)#}
+{#        {% endif %}#}
+{#            <br>#}
+{#        {% if shift.kitchen_shifts.am4_shifts %}#}
+{#            {{ shift.kitchen_shifts.am4_shifts.member.name }}<br>#}
+{#            {{ shift.kitchen_shifts.am4_shifts.since }}-{{ shift.kitchen_shifts.am4_shifts.to }}#}
+{#        {% else %}#}
+{#            (未)#}
+{#        {% endif %}#}
+{#            <br>#}
+        {% if shift.kitchen_shifts.pm1_shifts %}
+            {{ shift.kitchen_shifts.pm1_shifts.member.name }}<br>
+            {{ shift.kitchen_shifts.pm1_shifts.since }}-{{ shift.kitchen_shifts.pm1_shifts.to }}
+        {% else %}
+            (未)
+        {% endif %}
+            <br>
+        {% if shift.kitchen_shifts.pm2_shifts %}
+            {{ shift.kitchen_shifts.pm2_shifts.member.name }}<br>
+            {{ shift.kitchen_shifts.pm2_shifts.since }}-{{ shift.kitchen_shifts.pm2_shifts.to }}
+        {% else %}
+            (未)
+        {% endif %}
+            <br>
+{#        {% if shift.kitchen_shifts.pm3_shifts %}#}
+{#            {{ shift.kitchen_shifts.pm3_shifts.member.name }}<br>#}
+{#            {{ shift.kitchen_shifts.pm3_shifts.since }}-{{ shift.kitchen_shifts.pm3_shifts.to }}#}
+{#        {% else %}#}
+{#            (未)#}
+{#        {% endif %}#}
+        </td>
+        {% endfor %}
+    </tr>
+    </table>
+{#    {{ shifts|pprint }}#}
+{% endblock %}

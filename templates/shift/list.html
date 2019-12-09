@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block page_title %}Shifts{% endblock %}
+{% block title %}Shifts{% endblock %}
+{% block content %}
+{#    {% for shift in shifts%}#}
+{#        {{ shift.month }}#}
+{#    {% endfor %}#}
+{#    <a href="{% url 'shift:select' %}">シフトを書く</a>#}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.year }}年  {{ form.month }}月
+        <button type="submit" class="button">シフト希望表を作成・表示</button>
+    </form>
+{#    <a href="">新しいシフト希望表を作成する</a>#}
+    {{ year }}年{{ month }}月のシフト希望表
+        <table border="1" stnyle="border-collapse: collapse">
+            <tr>
+                <th>名前</th>
+                {% for day in days %}
+                <th>{{ day }}日</th>
+                {% endfor %}
+            </tr>
+            {% for shift in shifts %}
+            {% if shift.day == 1 %}
+            <tr>
+            <td><a href="{% url 'shift:write' shift.member.partner_number shift.year shift.month %}">{{ shift.member.name }}</a></td>
+            {% endif %}
+                    {% if shift.is_absence %}
+                    <td>×</td>
+                    {% else %}
+                    <td>{{ shift.since }}-{{ shift.to }}</td>
+                    {% endif %}
+            {% if shift.day == 15 %}
+            </tr>
+            {% endif %}
+            {% endfor %}
+        </table>
+{% endblock %}
