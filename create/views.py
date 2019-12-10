@@ -145,16 +145,16 @@ def auto_create(year, month):
         if choice_members:
             final_day_shifts['closer'] = random.choice(choice_members)
             choice_members.clear()
-            if final_day_shifts['opener'].to >= 17:
+            if final_day_shifts['opener'] and final_day_shifts['opener'].to < 17:
                 final_personal_shifts_closer = FinalPersonalShifts(
                     member=final_day_shifts['closer'].member,
-                    since=17,
+                    since=final_day_shifts['opener'].to,
                     to=22
                 )
             else:
                 final_personal_shifts_closer = FinalPersonalShifts(
                     member=final_day_shifts['closer'].member,
-                    since=final_day_shifts['opener'].to,
+                    since=17,
                     to=22
                 )
             final_personal_shifts_closer.save()
