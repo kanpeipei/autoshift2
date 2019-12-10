@@ -1,0 +1,61 @@
+html{
+    font-family: "Trebuchet MS", sans-serif;
+    font-weight: 800;
+}
+
+body, h1, hr {
+    margin: 0px;
+}
+
+nav a{
+    color: #e8e8e8;
+}
+
+nav p{
+    margin: 0px;
+    font-size: 30px;
+}
+
+nav{
+    padding: 10px 30px;
+    color: #e8e8e8;
+    background-color: #4a9ea8;
+}
+
+nav .site-name{
+    display: inline-block;
+}
+
+nav ul{
+    margin: 0px;
+    padding: 0px;
+    float: right;
+}
+
+nav ul li{
+    padding: 10px;
+    display: inline-block;
+}
+
+.title{
+    margin: 21px 50px;
+}
+
+.title > h1{
+    color: #4a9ea8;
+    font-size: 90px;
+}
+
+
+.content{
+    margin: 0px;
+}
+
+.form{
+    padding: 10px;
+}
+
+
+footer{
+    margin: 20px 20px;
+}
