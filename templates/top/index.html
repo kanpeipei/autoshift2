@@ -2,26 +2,57 @@
 
 {% block page_title %}Top{% endblock %}
 {% block title %}Top{% endblock %}
+{% block jquery %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+{% endblock %}
+{% block script %}
+    $(function(){
+        $(".opening p").css({opacity:'0'});
+        $('.opening p').animate({opacity:'1'},1000);
+        $(".index").css({opacity:'0'});
+        $(".index").css({display:'none'});
+        setTimeout(function() {
+            $('.opening').fadeOut();
+            $(".index").animate({opacity:'1'},1000);
+            $(".index").css("display", "block");
+        }, 3000);
+    });
+{% endblock %}
 {% block style %}
+    .opening{
+        top: 0;
+        width: 100%;
+        height: 100%;
+        max-height: 1080px;
+        background-color: #4ac7d6;
+        position: absolute;
+    }
+    .opening p {
+        padding-top: 200px;
+        color:#fff;
+        font-size:100px;
+        text-align: center;
+        position: relative;
+    }
 {% endblock %}
 
 {% block content %}
+    <div class="opening">
+        <p>AutoShift</p>
+    </div>
 
     <div class="index">
         <div class="content-info">
-    {#        <h1 class="info-title">Member</h1>#}
             <a href="{% url 'member:list' %}" class="info-title"><h1>Member</h1></a>
             <h2 class="info-detail">従業員の情報を管理</h2>
         </div>
 
         <div class="content-info">
-    {#        <h1 class="info-title">Shift</h1>#}
             <a href="{% url 'shift:list' %}" class="info-title"><h1>Shift</h1></a>
             <h2 class="info-detail">希望シフトを収集</h2>
         </div>
 
         <div class="content-info">
-    {#        <h1 class="info-title">Create</h1>#}
             <a href="{% url 'create:create' %}" class="info-title"><h1>Create</h1></a>
             <h2 class="info-detail">シフトを自動作成</h2>
         </div>

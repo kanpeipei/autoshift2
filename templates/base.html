@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="{% static 'top/index.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css">
     <title>{% block page_title %}{% endblock %}</title>
+    {% block jquery %}{% endblock %}
+    <script>{% block script %}{% endblock %}</script>
     <style>{% block style %}{% endblock %}</style>
 
 </head>
