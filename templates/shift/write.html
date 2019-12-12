@@ -1,6 +1,28 @@
 {% extends 'base.html' %}
 {% block page_title %}Write{% endblock %}
 {% block title %}Write{% endblock %}
+{% block style %}
+    .content{
+        margin:40px;
+    }
+    .button{
+        margin: 20px 0;
+        padding:7px 30px;
+        font-size:13px;
+        background-color:#4ac7d6;
+        color: #fff;
+        border-radius: 25px;
+    }
+    .button:hover{
+        background-color:#4ac7d6;
+        color: #333333;
+        transition: all 0.3s ease 0s;
+    }
+    td{
+        text-align: center;
+    }
+
+{% endblock %}
 {% block content %}
     パートナー番号 : {{ partner_number }}
     <form action="" method="post">

@@ -1,11 +1,29 @@
 {% extends 'base.html' %}
 {% block page_title %}New Member{% endblock %}
 {% block title %}New Member{% endblock %}
+{% block style %}
+    .content{
+        margin:40px;
+    }
+    .button{
+        margin: 20px 0;
+        padding:7px 30px;
+        font-size:13px;
+        background-color:#4ac7d6;
+        color: #fff;
+        border-radius: 25px;
+    }
+    .button:hover{
+        background-color:#4ac7d6;
+        color: #333333;
+        transition: all 0.3s ease 0s;
+    }
+{% endblock %}
 {% block content %}
     <form action="" method="post">
         {% csrf_token %}
         <h2>メンバー情報</h2>
-        <table>
+        <table cellpadding="8">
             <tr>
                 <td>名前</td>
                 <td>: {{ form.name }}</td>
@@ -24,7 +42,7 @@
             </tr>
         </table>
         <h2>ポジション</h2>
-        <table>
+        <table cellpadding="3">
             <tr>
                 <td>{{ form.is_counter }}</td>
                 <td>カウンター</td>
@@ -42,7 +60,7 @@
 
 
         <h2>その他</h2>
-        <table>
+        <table cellpadding="3">
             <tr>
                 <td>{{ form.is_smg }}</td>
                 <td>シフトマネージャー</td>

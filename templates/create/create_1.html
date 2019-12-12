@@ -2,12 +2,38 @@
 
 {% block page_title %}Create{% endblock %}
 {% block title %}Create{% endblock %}
+{% block style %}
+    .content{
+        margin:40px;
+    }
+    .button{
+        margin: 20px 0;
+        padding:7px 30px;
+        font-size:13px;
+        background-color:#4ac7d6;
+        color: #fff;
+        border-radius: 25px;
+    }
+    .button:hover{
+        background-color:#4ac7d6;
+        color: #333333;
+        transition: all 0.3s ease 0s;
+    }
+    td{
+        text-align: center;
+    }
+    .year-month-text{
+        margin:10px 0;
+    }
+
+{% endblock %}
 
 {% block content %}
-    西暦と月を指定してくだい。
+    <p class="year-month-text">西暦と月を指定してくだい。</p>
     <form action="" method="post">
         {% csrf_token %}
         {{ form.year }}年 {{ form.month }}月
+        <br>
         <button type="submit" class="button">シフトを自動作成</button>
     </form>
 {% endblock %}

@@ -1,9 +1,23 @@
 {% extends 'base.html' %}
 {% block page_title %}Member{% endblock %}
 {% block title %}Member{% endblock %}
+{% block style %}
+    .content {
+        margin: 40px;
+    }
+    .new-member{
+        color:#0097a9;
+    }
+    a:hover{
+        opacity: 0.6;
+    }
+    td{
+        text-align: center;
+    }
+{% endblock %}
 {% block content %}
-    <a href="{% url 'member:add' %}">新規メンバー登録</a>
-    <table border="1" style="border-collapse: collapse">
+    <a class="new-member" href="{% url 'member:add' %}">新規メンバー登録</a>
+    <table border="1" style="border-collapse: collapse" cellpadding="5px">
         <tr>
             <th>名前</th>
             <th>年齢</th>

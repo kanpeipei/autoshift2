@@ -1,11 +1,12 @@
 html{
     font-family: "Noto Sans Japanese", sans-serif;
-    font-weight: 100;
+    font-weight: 200;
 }
 
 body, h1, hr {
-    margin: 0px;
+    margin: 0;
 }
+
 h1{
     font-weight: 100;
 }
@@ -15,15 +16,23 @@ nav a{
     color: #e8e8e8;
 }
 
+a:hover{
+    opacity: 0.6;
+}
+
 nav p{
-    margin: 0px;
+    margin: 0;
+    padding: 0 20px;
     font-size: 30px;
 }
 
 nav{
-    padding: 10px 30px;
+    padding: 10px 0;
     color: #e8e8e8;
-    background-color: #4ac7d6;
+    background-color: #4ac7d6e8;
+    position: fixed;
+    width: 100%;
+    top:0;
 }
 
 nav .site-name{
@@ -31,8 +40,8 @@ nav .site-name{
 }
 
 nav ul{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0 20px;
     float: right;
 }
 
@@ -42,7 +51,7 @@ nav ul li{
 }
 
 .title{
-    margin: 21px 50px;
+    margin: 80px 50px;
 }
 
 .title > h1{
@@ -52,7 +61,7 @@ nav ul li{
 
 
 .content{
-    margin: 0px;
+    margin: 0;
 }
 
 .form{

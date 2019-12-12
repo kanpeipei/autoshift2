@@ -1,10 +1,34 @@
 {% extends 'base.html' %}
 {% block page_title %}Create{% endblock %}
 {% block title %}Create{% endblock %}
+{% block style %}
+    .content{
+        margin:40px;
+    }
+    .button{
+        margin: 20px 0;
+        padding:7px 30px;
+        font-size:13px;
+        background-color:#4ac7d6;
+        color: #fff;
+        border-radius: 25px;
+    }
+    .button:hover{
+        background-color:#4ac7d6;
+        color: #333333;
+        transition: all 0.3s ease 0s;
+    }
+    td{
+        text-align: center;
+    }
+
+{% endblock %}
+
 {% block content %}
     <form action="" method="post">
         {% csrf_token %}
         {{ form.year }}年 {{ form.month }}月
+        <br>
         <button type="submit" class="button">シフトを再自動作成</button>
     </form>
 {#    {{ shift.member.partner_number }}#}
@@ -56,6 +80,7 @@
             (未)
         {% endif %}
             <br>
+            <hr>
         {% if shift.counter_shifts.am2_shifts %}
             {{ shift.counter_shifts.am2_shifts.member.name }}<br>
             {{ shift.counter_shifts.am2_shifts.since }}-{{ shift.counter_shifts.am2_shifts.to }}
@@ -63,6 +88,7 @@
             (未)
         {% endif %}
             <br>
+            <hr>
         {% if shift.counter_shifts.am3_shifts %}
             {{ shift.counter_shifts.am3_shifts.member.name }}<br>
             {{ shift.counter_shifts.am3_shifts.since }}-{{ shift.counter_shifts.am3_shifts.to }}
@@ -70,6 +96,7 @@
             (未)
         {% endif %}
             <br>
+            <hr>
         {% if shift.counter_shifts.am4_shifts %}
             {{ shift.counter_shifts.am4_shifts.member.name }}<br>
             {{ shift.counter_shifts.am4_shifts.since }}-{{ shift.counter_shifts.am4_shifts.to }}
@@ -77,6 +104,7 @@
             (未)
         {% endif %}
             <br>
+            <hr>
         {% if shift.counter_shifts.pm1_shifts %}
             {{ shift.counter_shifts.pm1_shifts.member.name }}<br>
             {{ shift.counter_shifts.pm1_shifts.since }}-{{ shift.counter_shifts.pm1_shifts.to }}
@@ -84,6 +112,7 @@
             (未)
         {% endif %}
             <br>
+            <hr>
         {% if shift.counter_shifts.pm2_shifts %}
             {{ shift.counter_shifts.pm2_shifts.member.name }}<br>
             {{ shift.counter_shifts.pm2_shifts.since }}-{{ shift.counter_shifts.pm2_shifts.to }}
@@ -91,6 +120,7 @@
             (未)
         {% endif %}
             <br>
+            <hr>
         {% if shift.counter_shifts.pm3_shifts %}
             {{ shift.counter_shifts.pm3_shifts.member.name }}<br>
             {{ shift.counter_shifts.pm3_shifts.since }}-{{ shift.counter_shifts.pm3_shifts.to }}
@@ -112,6 +142,7 @@
             (未)
         {% endif %}
             <br>
+            <hr>
 {#        {% if shift.kitchen_shifts.am2_shifts %}#}
 {#            {{ shift.kitchen_shifts.am2_shifts.member.name }}<br>#}
 {#            {{ shift.kitchen_shifts.am2_shifts.since }}-{{ shift.kitchen_shifts.am2_shifts.to }}#}
@@ -140,6 +171,7 @@
             (未)
         {% endif %}
             <br>
+            <hr>
         {% if shift.kitchen_shifts.pm2_shifts %}
             {{ shift.kitchen_shifts.pm2_shifts.member.name }}<br>
             {{ shift.kitchen_shifts.pm2_shifts.since }}-{{ shift.kitchen_shifts.pm2_shifts.to }}

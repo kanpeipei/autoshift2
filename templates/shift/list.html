@@ -1,17 +1,34 @@
 {% extends 'base.html' %}
 {% block page_title %}Shifts{% endblock %}
 {% block title %}Shifts{% endblock %}
+{% block style %}
+    .content{
+        margin:20px;
+    }
+    .member{
+        color:#008a9a;
+    }
+    .button{
+        margin: 20px 20px;
+        padding:7px 30px;
+        font-size:13px;
+        background-color:#4ac7d6;
+        color: #fff;
+        border-radius: 25px;
+    }
+    .button:hover{
+        background-color:#4ac7d6;
+        color: #333333;
+        transition: all 0.3s ease 0s;
+    }
+
+{% endblock %}
 {% block content %}
-{#    {% for shift in shifts%}#}
-{#        {{ shift.month }}#}
-{#    {% endfor %}#}
-{#    <a href="{% url 'shift:select' %}">シフトを書く</a>#}
     <form action="" method="post">
         {% csrf_token %}
         {{ form.year }}年  {{ form.month }}月
         <button type="submit" class="button">シフト希望表を作成・表示</button>
     </form>
-{#    <a href="">新しいシフト希望表を作成する</a>#}
     {{ year }}年{{ month }}月のシフト希望表
         <table border="1" stnyle="border-collapse: collapse">
             <tr>
@@ -23,7 +40,11 @@
             {% for shift in shifts %}
             {% if shift.day == 1 %}
             <tr>
-            <td><a href="{% url 'shift:write' shift.member.partner_number shift.year shift.month %}">{{ shift.member.name }}</a></td>
+            <td>
+                <a class="member" href="{% url 'shift:write' shift.member.partner_number shift.year shift.month %}">
+                    {{ shift.member.name }}
+                </a>
+            </td>
             {% endif %}
                     {% if shift.is_absence %}
                     <td>×</td>
