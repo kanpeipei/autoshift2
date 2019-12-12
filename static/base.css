@@ -1,11 +1,15 @@
 html{
-    font-family: "Trebuchet MS", sans-serif;
-    font-weight: 800;
+    font-family: "Noto Sans Japanese", sans-serif;
+    font-weight: 100;
 }
 
 body, h1, hr {
     margin: 0px;
 }
+h1{
+    font-weight: 100;
+}
+
 
 nav a{
     color: #e8e8e8;
@@ -19,7 +23,7 @@ nav p{
 nav{
     padding: 10px 30px;
     color: #e8e8e8;
-    background-color: #4a9ea8;
+    background-color: #4ac7d6;
 }
 
 nav .site-name{
@@ -42,7 +46,7 @@ nav ul li{
 }
 
 .title > h1{
-    color: #4a9ea8;
+    color: #4ac7d6;
     font-size: 90px;
 }
 
