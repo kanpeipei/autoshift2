@@ -8,17 +8,19 @@
 {% block script %}
     $(function(){
         $(".opening p").css({opacity:'0'});
-        $('.opening p').animate({opacity:'1'},1000);
+        setTimeout(function() {
+            $('.opening p').animate({opacity:'1'},1000);
+        }, 1000);
         $(".index").css({opacity:'0'});
         $(".index").css({display:'none'});
         setTimeout(function() {
             $('.opening p').animate({opacity:'0'},1000);
-        }, 2000);
+        }, 2500);
         setTimeout(function() {
             $('.opening').fadeOut();
             $(".index").animate({opacity:'1'},1000);
             $(".index").css("display", "block");
-        }, 3500);
+        }, 4000);
     });
 {% endblock %}
 {% block style %}
