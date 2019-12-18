@@ -31,7 +31,11 @@
         </tr>
         {% for member in members %}
         <tr>
-            <td>{{ member.name }}</td>
+            <td>
+                <a href="{% url 'member:modify' member.partner_number %}">
+                    {{ member.name }}
+                </a>
+            </td>
             <td>{{ member.age }}</td>
             <td>{{ member.partner_number }}</td>
             <td>{{ member.hourly_pay }}</td>

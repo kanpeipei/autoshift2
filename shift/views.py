@@ -104,7 +104,6 @@ class ShiftsWriteViews(View):
                 shift.to = form.cleaned_data['to']
                 shift.is_absence = form.cleaned_data['is_absence']
                 shift.save()
-                # return render(request, 'shift/complete.html', {'form': shift.is_absence})
             else:
                 error = "エラーが発生しました"
                 return redirect('shift:write')
@@ -114,7 +113,3 @@ class ShiftsWriteViews(View):
 shifts_write = ShiftsWriteViews.as_view()
 
 
-# def day_of_week(year, month, day):
-#     locale.setlocale(locale.LC_TIME, 'ja_JP.UTF-8')
-#     d = date(year, month, day)
-#     return d.weekday()

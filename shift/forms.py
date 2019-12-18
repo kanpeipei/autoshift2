@@ -1,11 +1,5 @@
 from django import forms
-from .models import RequestedShifts
 
-
-# class RequestedShiftsForm(forms.ModelForm):
-#     class Meta:
-#         model = RequestedShifts
-#         exclude = ['member', 'year', 'month', 'day', 'created_at', 'updated_at']
 
 class RequestedShiftsForm(forms.Form):
     since = forms.ChoiceField(
