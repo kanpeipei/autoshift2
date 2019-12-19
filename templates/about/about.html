@@ -38,7 +38,7 @@
                     var elemPos = $(this).offset().top;
                     var scroll = $(window).scrollTop();
                     var windowHeight = $(window).height();
-                    if (scroll > elemPos - windowHeight+200){
+                    if (scroll > elemPos - windowHeight + windowHeight/3){
                         $(this).addClass('effect-scroll');
                     }
                 });
@@ -59,13 +59,46 @@
 
     <div class="container">
         <div class="page-top">
-            <div class="img">
+            <div class="img-right">
                 <img class="effect-fade" src="{% static 'images/IMG_7175.jpg' %}" alt="">
             </div>
             <div class="page-top-text">
                 <h1 class="name">Sato</h1>
                 <h1 class="name">Kanpei</h1>
             </div>
+            <div class="about-me">
+                <h2>About me</h2>
+            </div>
+        </div>
+{#        <div class="space-2">#}
+{#        </div>#}
+
+        <div class="article">
+            <div class="img-left">
+                <img class="effect-fade" src="{% static 'images/IMG_7176.jpg' %}" alt="">
+            </div>
+            <div class="article-text-right">
+                <h2 class="article-title effect-fade">ミレニアムベビー</h2>
+                <p class="article-detail effect-fade">
+                    2000年1月8日生まれ<br>
+                    19歳
+                </p>
+            </div>
+        </div>
+
+        <div class="article">
+            <div class="img-right">
+                <img class="effect-fade" src="{% static 'images/IMG_7174.jpg' %}" alt="">
+            </div>
+            <div class="article-text-left university-article">
+                <h2 class="article-title effect-fade">エンジニアに憧れて</h2>
+                <p class="article-detail effect-fade">
+                    東京理科大学工学部情報工学科へ進学<br>
+                    現在二年生
+                </p>
+            </div>
+        </div>
+        <div class="space-2">
         </div>
     </div>
 

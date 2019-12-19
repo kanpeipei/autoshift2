@@ -7,6 +7,9 @@ nav{
     background-color: #00000000;
     z-index: 999;
 }
+.title{
+    margin: 0;
+}
 .opening{
     position: absolute;
 }
@@ -14,9 +17,7 @@ nav{
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-
 }
 .page-top-text{
     position: absolute;
@@ -27,19 +28,63 @@ nav{
     font-weight: 600;
     text-align: left;
 }
-.page-top .img{
-    position: absolute;
+.img-right{
     right: 0;
+    position: absolute;
+
+}
+.img-left {
+    left: 0;
+    position: absolute;
 }
 img{
     width: 100%;
 }
+/*.page-top .img-right{*/
+/*    position: absolute;*/
+/*}*/
 .effect-fade {
-    opacity : 0.1;
+    opacity : 0;
     transform : translate(0, 45px);
     transition : all 1s;
 }
 .effect-fade.effect-scroll {
-    opacity : 1;
+    opacity : 0.9;
     transform : translate(0, 0);
 }
+.about-me{
+    position: absolute;
+    left: 45%;
+    bottom: 0;
+}
+.article{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.article-text-right{
+    position: absolute;
+    right: 20%;
+}
+.article-text-left{
+    position: absolute;
+    left: 20%;
+}
+.university-article{
+    left: 45%;
+}
+.article-title{
+    font-size: 30px;
+    font-weight: 100;
+}
+.space-1{
+    margin: 300px;
+}
+.space-2{
+    margin: 400px;
+}
+footer{
+    background-color: #252525;
+}
+
