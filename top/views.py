@@ -5,7 +5,6 @@ from django.views.generic import View
 
 
 class IndexViews(View):
-
     def get(self, request, *args, **kwargs):
         return render(request, 'top/index.html')
 
@@ -15,7 +14,7 @@ index = IndexViews.as_view()
 
 class AboutViews(View):
     def get(self, request, *args, **kwargs):
-        return render(request,'about/about.html')
+        return render(request, 'about/about.html')
 
 
 about = AboutViews.as_view()
