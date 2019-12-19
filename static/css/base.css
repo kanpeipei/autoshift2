@@ -7,13 +7,13 @@ body, h1, hr {
     margin: 0;
 }
 
-h1{
-    font-weight: 100;
-}
-
-
 nav a{
     color: #e8e8e8;
+}
+
+a{
+    transition: opacity 0.5s;
+    text-decoration: none;
 }
 
 a:hover{
@@ -27,7 +27,7 @@ nav p{
 }
 
 nav{
-    padding: 10px 0;
+    padding: 10px 10px;
     color: #e8e8e8;
     background-color: #4ac7d6e8;
     position: fixed;
@@ -37,6 +37,7 @@ nav{
 
 nav .site-name{
     display: inline-block;
+    font-size: 30px;
 }
 
 nav ul{
@@ -50,16 +51,18 @@ nav ul li{
     display: inline-block;
 }
 
+h1{
+    font-weight: 100;
+}
 .title{
-    margin: 80px 50px;
+    margin: 90px 50px 21px 50px;
+
 }
 
 .title > h1{
     color: #4ac7d6;
     font-size: 90px;
 }
-
-
 .content{
     margin: 0;
 }
@@ -67,7 +70,6 @@ nav ul li{
 .form{
     padding: 10px;
 }
-
 
 footer{
     margin: 20px 20px;

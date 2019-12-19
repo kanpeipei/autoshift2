@@ -22,4 +22,5 @@ urlpatterns = [
     path('member/', include('member.urls')),
     path('shift/', include('shift.urls')),
     path('create/', include('create.urls')),
+    # path('about/', include('top.urls'))
 ]

@@ -3,23 +3,23 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="{% static 'base.css' %}">
-    <link rel="stylesheet" href="{% static 'top/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block css %}{% endblock %}
     <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css">
     <title>{% block page_title %}{% endblock %}</title>
     {% block jquery %}{% endblock %}
     <script>{% block script %}{% endblock %}</script>
     <style>{% block style %}{% endblock %}</style>
-
 </head>
 <body>
 <nav>
-    <a href="{% url 'top:index' %}"><p class="site-name">AutoShift</p></a>
+    <a href="{% url 'top:index' %}" class="site-name">AutoShift</a>
     <ul>
         <li><a href="{% url 'top:index' %}">Top</a></li>
         <li><a href="{% url 'member:list' %}">Member</a></li>
         <li><a href="{% url 'shift:list' %}">Shift</a></li>
         <li><a href="{% url 'create:create' %}">Create</a></li>
+        <li><a href="{% url 'top:about' %}">About me</a></li>
 
     </ul>
 </nav>
@@ -33,8 +33,8 @@
     {% block content%}{% endblock %}
 </div>
 
-<hr>
 <footer>
+<hr>
   ©kanpeipei
 </footer>
 

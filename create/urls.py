@@ -5,7 +5,6 @@ from .views import create
 
 app_name = 'create'
 urlpatterns = [
-    # path('select/', select, name='select'),
-    path('create/', create, name='create')
+    path('', create, name='create')
 ]
 

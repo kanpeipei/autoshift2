@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/about/about.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700" rel="stylesheet">
+{% endblock %}
+{% block jquery %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+{% endblock %}
+{% block script %}
+    $(function(){
+        $(".opening").css({opacity:'0'});
+        setTimeout(function() {
+            $('.opening').animate({opacity:'1'},1000);
+        }, 1000);
+        $(".container").css({opacity:'0'});
+        $(".container").css({display:'none'});
+        $("nav").css({opacity:'0'});
+        $("nav").css({display:'none'});
+        $("footer").css({opacity:'0'});
+        $("footer").css({display:'none'});
+        setTimeout(function() {
+            $("nav").animate({opacity:'1'},1000);
+            $("nav").css("display", "block");
+        }, 3000);
+        setTimeout(function() {
+            $(".container").animate({opacity:'1'},1000);
+            $(".container").css("display", "block");
+            $("footer").animate({opacity:'1'},1000);
+            $("footer").css("display", "block");
+        }, 4000);
+        setTimeout(function() {
+            $(".opening").css({display:'none'});
+
+            $(window).scroll(function (){
+                $('.effect-fade').each(function(){
+                    var elemPos = $(this).offset().top;
+                    var scroll = $(window).scrollTop();
+                    var windowHeight = $(window).height();
+                    if (scroll > elemPos - windowHeight+200){
+                        $(this).addClass('effect-scroll');
+                    }
+                });
+            });
+        }, 5000);
+
+    });
+{% endblock %}
+{% block content %}
+    <div class="opening">
+        <div class="page-top">
+            <div class="page-top-text">
+                <h1 class="name">Sato</h1>
+                <h1 class="name">Kanpei</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="page-top">
+            <div class="img">
+                <img class="effect-fade" src="{% static 'images/IMG_7175.jpg' %}" alt="">
+            </div>
+            <div class="page-top-text">
+                <h1 class="name">Sato</h1>
+                <h1 class="name">Kanpei</h1>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

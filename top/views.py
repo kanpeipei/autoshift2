@@ -12,3 +12,10 @@ class IndexViews(View):
 
 index = IndexViews.as_view()
 
+
+class AboutViews(View):
+    def get(self, request, *args, **kwargs):
+        return render(request,'about/about.html')
+
+
+about = AboutViews.as_view()

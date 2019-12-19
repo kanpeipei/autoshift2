@@ -8,6 +8,9 @@
     .new-member{
         color:#0097a9;
     }
+    .member{
+        color:#008a9a;
+    }
     a:hover{
         opacity: 0.6;
     }
@@ -32,7 +35,7 @@
         {% for member in members %}
         <tr>
             <td>
-                <a href="{% url 'member:modify' member.partner_number %}">
+                <a class="member" href="{% url 'member:modify' member.partner_number %}">
                     {{ member.name }}
                 </a>
             </td>

@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
+{% load static %}
 
+{% block css %}<link rel="stylesheet" href="{% static 'css/top/index.css' %}">{% endblock %}
 {% block page_title %}Top{% endblock %}
 {% block title %}Top{% endblock %}
 {% block jquery %}

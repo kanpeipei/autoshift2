@@ -1,0 +1,45 @@
+html, body, nav{
+    font-family: Brown-Regular, "Noto Sans", HiraKakuProN-W3, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+    background-color: black;
+    color: white;
+}
+nav{
+    background-color: #00000000;
+    z-index: 999;
+}
+.opening{
+    position: absolute;
+}
+.page-top{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.page-top-text{
+    position: absolute;
+    left: 20%;
+}
+.name{
+    font-size: 130px;
+    font-weight: 600;
+    text-align: left;
+}
+.page-top .img{
+    position: absolute;
+    right: 0;
+}
+img{
+    width: 100%;
+}
+.effect-fade {
+    opacity : 0.1;
+    transform : translate(0, 45px);
+    transition : all 1s;
+}
+.effect-fade.effect-scroll {
+    opacity : 1;
+    transform : translate(0, 0);
+}
