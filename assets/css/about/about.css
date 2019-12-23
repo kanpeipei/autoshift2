@@ -1,0 +1,131 @@
+html, body, nav{
+    font-family: Brown-Regular, "Noto Sans", HiraKakuProN-W3, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+    background-color: black;
+    color: white;
+}
+nav{
+    background-color: #00000000;
+    z-index: 999;
+}
+.title{
+    margin: 0;
+}
+.opening{
+    position: absolute;
+}
+.page-top{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.page-top-text{
+    position: absolute;
+    left: 20%;
+}
+.name{
+    font-size: 130px;
+    font-weight: 600;
+    text-align: left;
+}
+.img-right{
+    right: 0;
+    position: absolute;
+
+}
+.img-left {
+    left: 0;
+    position: absolute;
+}
+img{
+    width: 100%;
+}
+/*.page-top .img-right{*/
+/*    position: absolute;*/
+/*}*/
+.effect-fade {
+    opacity : 0;
+    transform : translate(0, 45px);
+    transition : all 1s;
+}
+.effect-fade.effect-scroll {
+    opacity : 0.9;
+    transform : translate(0, 0);
+}
+.about-me{
+    position: absolute;
+    left: 45%;
+    bottom: 0;
+}
+.article{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.article-text-right{
+    position: absolute;
+    right: 20%;
+}
+.article-text-left{
+    position: absolute;
+    left: 20%;
+}
+.article-title{
+    font-size: 40px;
+    font-weight: 900;
+}
+.university-article{
+    left: 45%;
+}
+.lang{
+    /*position: absolute;*/
+    /*left: 40%;*/
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    background-color: #e8e8e8;
+}
+.language-article{
+    width: 100vw;
+}
+.language-article .article-title{
+    margin: 130px;
+    color: black;
+}
+.language-article .article-detail{
+    /*background-color: white;*/
+}
+.lang-icon{
+    width: 200px;
+}
+.kfc-article .article-text-left{
+    left: 6%;
+}
+.hobby-article .article-text-right{
+    right: 10%;
+}
+.link-article a{
+    color: white;
+    transition: color 0.5s;
+}
+.link-article a:hover{
+    color: black;
+}
+.icon{
+    margin:0 40px 0 0;
+}
+.qiita-icon{
+    width: 100px;
+}
+.space-1{
+    margin: 300px;
+}
+.space-2{
+    margin: 400px;
+}
+footer{
+    background-color: #252525;
+}
+

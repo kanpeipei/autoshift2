@@ -1,0 +1,77 @@
+html{
+    font-family: "Noto Sans Japanese", sans-serif;
+    font-weight: 200;
+}
+
+body, h1, hr {
+    margin: 0;
+}
+
+nav a{
+    color: #e8e8e8;
+}
+
+a{
+    transition: opacity 0.5s;
+    text-decoration: none;
+}
+
+a:hover{
+    opacity: 0.6;
+}
+
+nav p{
+    margin: 0;
+    padding: 0 20px;
+    font-size: 30px;
+}
+
+nav{
+    padding: 10px 10px;
+    color: #e8e8e8;
+    background-color: #4ac7d6e8;
+    position: fixed;
+    width: 100%;
+    top:0;
+}
+
+nav .site-name{
+    display: inline-block;
+    font-size: 30px;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0 20px;
+    float: right;
+}
+
+nav ul li{
+    padding: 10px;
+    display: inline-block;
+}
+
+h1{
+    font-weight: 100;
+}
+.title{
+    margin: 90px 50px 21px 50px;
+
+}
+
+.title > h1{
+    color: #4ac7d6;
+    font-size: 90px;
+}
+.content{
+    margin: 0;
+}
+
+.form{
+    padding: 10px;
+}
+
+footer{
+    padding: 80px;
+    background-color: #d4d4d4;
+}
