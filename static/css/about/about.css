@@ -71,12 +71,53 @@ img{
     position: absolute;
     left: 20%;
 }
+.article-title{
+    font-size: 40px;
+    font-weight: 900;
+}
 .university-article{
     left: 45%;
 }
-.article-title{
-    font-size: 30px;
-    font-weight: 100;
+.lang{
+    /*position: absolute;*/
+    /*left: 40%;*/
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    background-color: #e8e8e8;
+}
+.language-article{
+    width: 100vw;
+}
+.language-article .article-title{
+    margin: 130px;
+    color: black;
+}
+.language-article .article-detail{
+    /*background-color: white;*/
+}
+.lang-icon{
+    width: 200px;
+}
+.kfc-article .article-text-left{
+    left: 6%;
+}
+.hobby-article .article-text-right{
+    right: 10%;
+}
+.link-article a{
+    color: white;
+    transition: color 0.5s;
+}
+.link-article a:hover{
+    color: black;
+}
+.icon{
+    margin:0 40px 0 0;
+}
+.qiita-icon{
+    width: 100px;
 }
 .space-1{
     margin: 300px;

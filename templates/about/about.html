@@ -4,6 +4,7 @@
 {% block css %}
     <link rel="stylesheet" href="{% static 'css/about/about.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet">
 {% endblock %}
 {% block jquery %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -70,8 +71,9 @@
                 <h2>About me</h2>
             </div>
         </div>
-{#        <div class="space-2">#}
-{#        </div>#}
+
+        <div class="space-2">
+        </div>
 
         <div class="article">
             <div class="img-left">
@@ -79,11 +81,14 @@
             </div>
             <div class="article-text-right">
                 <h2 class="article-title effect-fade">ミレニアムベビー</h2>
-                <p class="article-detail effect-fade">
-                    2000年1月8日生まれ<br>
-                    19歳
-                </p>
+                <div class="article-detail effect-fade">
+                    <p>2000年1月8日生まれ</p>
+                    <p>19歳</p>
+                </div>
             </div>
+        </div>
+
+        <div class="space-2">
         </div>
 
         <div class="article">
@@ -92,12 +97,106 @@
             </div>
             <div class="article-text-left university-article">
                 <h2 class="article-title effect-fade">エンジニアに憧れて</h2>
-                <p class="article-detail effect-fade">
-                    東京理科大学工学部情報工学科へ進学<br>
-                    現在二年生
-                </p>
+                <div class="article-detail effect-fade">
+                    <p>東京理科大学工学部情報工学科へ進学</p>
+                    <p>現在二年生</p>
+                </div>
             </div>
         </div>
+
+        <div class="space-1">
+        </div>
+        <div class="space-1">
+        </div>
+
+        <div class="article lang effect-fade">
+            <div class="language-article effect-fade">
+                <h2 class="article-title effect-fade">使用言語</h2>
+                <div class="article-detail effect-fade">
+                    <img class="effect-fad lang-icon" src="https://camo.githubusercontent.com/35fd92f57b349f1938b00b3007653e4d34b94ba7/68747470733a2f2f63646e2e7261776769742e636f6d2f6269744865726f2f62697449636f6e2f6d61737465722f7376672f6370702e737667" alt="">
+{#                    <img class="effect-fad lang-icon" src="https://camo.githubusercontent.com/097c33c34d0a98c0d7ec64b52f01ce6c39684f28/68747470733a2f2f63646e2e7261776769742e636f6d2f6269744865726f2f62697449636f6e2f6d61737465722f7376672f6a732e737667" alt="">#}
+                    <img class="effect-fad lang-icon" src="https://camo.githubusercontent.com/d20847823a158d9c121fc84192d7a554d6b8d756/68747470733a2f2f63646e2e7261776769742e636f6d2f6269744865726f2f62697449636f6e2f6d61737465722f7376672f7068702e737667" alt="">
+                    <img class="effect-fad lang-icon" src="https://camo.githubusercontent.com/311aaf46a28ee8729dbc938e7ee3b7b2a920e652/68747470733a2f2f63646e2e7261776769742e636f6d2f6269744865726f2f62697449636f6e2f6d61737465722f7376672f707974686f6e2e737667" alt="">
+                    <img class="effect-fad lang-icon" src="https://camo.githubusercontent.com/0ab6e204312d2d2609c1d41cd15fcf9dadcf3456/68747470733a2f2f63646e2e7261776769742e636f6d2f6269744865726f2f62697449636f6e2f6d61737465722f7376672f637373332e737667" alt="">
+                    <img class="effect-fad lang-icon" src="https://camo.githubusercontent.com/7bcf7478da0670166d33d6cb11cb9758fb9542d6/68747470733a2f2f63646e2e7261776769742e636f6d2f6269744865726f2f62697449636f6e2f6d61737465722f7376672f68746d6c352e737667" alt="">
+                    <img class="effect-fad lang-icon" src="https://camo.githubusercontent.com/4aca570dad529bcdc18d72ccb1f60d36fc84497c/68747470733a2f2f63646e2e7261776769742e636f6d2f6269744865726f2f62697449636f6e2f6d61737465722f7376672f6d7973716c2e737667" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="space-2">
+        </div>
+
+        <div class="article kfc-article">
+            <div class="img-right">
+                <img class="effect-fade" src="{% static 'images/IMG_7173.jpg' %}" alt="">
+            </div>
+            <div class="article-text-left">
+                <h2 class="article-title effect-fade">KFC</h2>
+                <div class="article-detail effect-fade">
+                    <p>ケンタッキーフライドチキンのシフトマネージャー</p>
+                    <p>シフト自動作成システムのきっかけをもらった</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-2">
+        </div>
+
+        <div class="article hobby-article">
+            <div class="img-left">
+                <img class="effect-fade" src="{% static 'images/IMG_7180.jpg' %}" alt="">
+            </div>
+            <div class="article-text-right">
+                <h2 class="article-title effect-fade">趣味は洋服</h2>
+                <div class="article-detail effect-fade">
+                    <p>祐天寺でビンテージ探し</p>
+                    <p>買い物の前は『ぼんご』でおにぎりを食べるのがルーティーン</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-2">
+        </div>
+
+        <div class="article hotcake-article">
+            <div class="img-right">
+                <img class="effect-fade" src="{% static 'images/IMG_7215.jpg' %}" alt="">
+            </div>
+            <div class="article-text-left">
+                <h2 class="article-title effect-fade">得意料理</h2>
+                <div class="article-detail effect-fade">
+                    <p>牛乳多めの薄いホットケーキ</p>
+                    <p>火は出てるか出てないかくらいがちょうどいい</p>
+                    <p>弱火じゃ少し強すぎる</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-2">
+        </div>
+
+        <div class="article link-article">
+            <div class="img-right">
+                <img class="effect-fade" src="{% static 'images/IMG_3575.jpg' %}" alt="">
+            </div>
+            <div class="article-text-right">
+                <h2 class="article-title effect-fade">アウトプット</h2>
+                <div class="article-detail effect-fade">
+                    <a href="https://github.com/kanpeipei">
+                        <span class="icon fab fa-github" style="font-size: 3em;"></span>
+                    </a>
+                    <a href="https://twitter.com/kanpeipei2">
+                        <span class="icon fab fa-twitter" style="font-size: 3em;"></span>
+                    </a>
+                    <a href="https://qiita.com/kanpeipei">
+{#                        <img class="icon qiita-icon" src="{% static 'images/logo.png' %}">#}
+                        <span class="icon fas fa-pencil-alt" style="font-size: 3em;"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
         <div class="space-2">
         </div>
     </div>
